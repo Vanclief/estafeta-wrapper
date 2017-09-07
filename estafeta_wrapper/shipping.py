@@ -15,6 +15,7 @@ def ship(
     o_info,
     weight,
     content,
+    reference='1',
     additional_info='1',
     production=False
 ):
@@ -66,6 +67,7 @@ def ship(
 
     label_description_list = factory0.LabelDescriptionList(
         aditionalInfo=additional_info,
+        reference=reference,
         content=content,
         deliveryToEstafetaOffice=delivery_to_estafeta_office,
         numberOfLabels=number_of_labels,
