@@ -10,11 +10,11 @@ def ship(
     login,
     password,
     subscriber_id,
-    customer_number,
     d_info,
     o_info,
     weight,
     content,
+    customer_number,
     reference='1',
     additional_info='1',
     production=False
@@ -48,6 +48,7 @@ def ship(
     valid = True
     label_description_list_count = 1
 
+    customer_number = '0000'
     d_info['customerNumber'] = customer_number
     d_info['valid'] = valid
     destination_info = factory0.DestinationInfo(**d_info)
