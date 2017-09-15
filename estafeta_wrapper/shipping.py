@@ -15,6 +15,8 @@ def ship(
     weight,
     content,
     customer_number,
+    office_number,
+    service_type,
     reference='1',
     additional_info='1',
     production=False
@@ -62,10 +64,10 @@ def ship(
     # labelDescriptionList
     delivery_to_estafeta_office = True
     number_of_labels = 1
-    office_num=130
+    office_num = office_number
     parcel_type_id = 1 # 4 Sobre, 1 Paquete cambiar por Enum
     return_document = False
-    service_type_id=70
+    service_type_id = service_type
     zip_code = o_info['zipCode']
 
     label_description_list = factory0.LabelDescriptionList(
