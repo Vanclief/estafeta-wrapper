@@ -48,7 +48,9 @@ def ship(
     valid = True
     label_description_list_count = 1
 
-    customer_number = '0000000'
+    if len(customer_number) < 7:
+        customer_number = '0000000'
+        
     d_info['customerNumber'] = customer_number
     d_info['valid'] = valid
     destination_info = factory0.DestinationInfo(**d_info)
